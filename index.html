@@ -8,20 +8,20 @@
     <link rel="icon" type="image/jpg" href="11.jpg">
 </head>
 <body>
-    <h1>Portfolio MAKER!</h1>
+    <h1>Portfolio Maker!</h1>
     <div class="container" id="container">
         <div class="input-field">
             <label for="name">Name</label>
-            <input type="text" id="name" >
+            <input type="text" id="name" required>
         </div>
         
         <div class="input-field">
             <label for="about">About</label>
-            <textarea id="about" rows="4"></textarea>
+            <textarea id="about" rows="4" required></textarea>
         </div>
         <div class="input-field">
             <label for="age">Age</label>
-            <input type="number" id="age">
+            <input type="number" id="age" required>
         </div>
         <div class="input-field">
             <label for="achievements">Achievements</label>
@@ -32,7 +32,7 @@
             <textarea id="hobbies" rows="4"></textarea>
         </div>
         <div class="input-field">
-            <label for="creations">Ceations</label>
+            <label for="creations">Creations</label>
             <textarea id="creations" rows="4"></textarea>
         </div>
         <div class="input-field">
@@ -48,7 +48,7 @@
             <label for="id">ID</label>
             <input type="text" id="id">
         </div>
-        <button onclick="submitForm()">Submit</button>
+        <button type="submit" onclick="submitForm()">Submit</button>
     </div>
 
     <script src="script.js"></script>
