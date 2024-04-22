@@ -3,10 +3,12 @@ body {
     margin: 0;
     padding: 0;
  
-    background-image : url(5559852.jpg)
+    background-image : url(11.jpg);
+    background-position: center center;
 }
 
 .container {
+    position: relative;
     width: 50%;
     margin: 50px auto;
     padding: 30px;
@@ -53,6 +55,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    text-align: center;
+    
 }
 
 button:hover {
