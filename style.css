@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ 
+    background-image : url(5559852.jpg)
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-100px); /* Initially positioned above */
+    
+    
+}
+
+.input-field {
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+    color:#000000;
+    font-style: italic;
+    font-style: oblique;
+    
+}
+
+.input-field input,
+.input-field textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.portfolio {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.portfolio h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio p {
+    color: #666;
+}
+
+#id-field label {
+    color: #007bff;
+    font-weight: bold;
+}
+h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 90px;
+    font-style: italic;
+    font-family: cursive;;
+    font-weight: bold;
+   
+
+}
+
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#image {
+    margin-top: 10px; /* Add some spacing above the image */
+    /* Additional styling as needed */
+}
+
