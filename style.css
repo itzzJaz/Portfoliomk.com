@@ -32,6 +32,7 @@ body {
     color:#000000;
     font-style: italic;
     font-style: oblique;
+    font-size: 30px;
     
 }
 
@@ -109,3 +110,10 @@ h1{
     /* Additional styling as needed */
 }
 
+footer{
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    font-size: 10px
+    
+}
