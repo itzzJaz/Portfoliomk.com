@@ -12,9 +12,9 @@ function generateRandomID() {
 }
 
 // Function to submit the form
+// Function to submit the form
 function submitForm() {
     var name = document.getElementById('name').value;
-    // Get the uploaded image
     var image = document.getElementById('image').files[0];
     var about = document.getElementById('about').value;
     var age = document.getElementById('age').value;
@@ -29,14 +29,31 @@ function submitForm() {
         id = generateRandomID();
         document.getElementById('id').value = id;
 
-        // Convert image to base64 string for storage
-        var reader = new FileReader();
-        reader.onload = function(event) {
-            var imageData = event.target.result;
+        // Convert image to base64 string for storage if an image is provided
+        var imageData = null;
+        if (image) {
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                imageData = event.target.result;
 
+                portfolios[id] = {
+                    name: name,
+                    image: imageData,
+                    age: age,
+                    achievements: achievements,
+                    about: about,
+                    hobbies: hobbies,
+                    creations: creations,
+                    inventions: inventions,
+                    aspirations: aspirations
+                };
+                localStorage.setItem('portfolios', JSON.stringify(portfolios));
+            };
+            reader.readAsDataURL(image);
+        } else {
+            // If no image provided, store other details without the image
             portfolios[id] = {
                 name: name,
-                image: imageData,
                 age: age,
                 achievements: achievements,
                 about: about,
@@ -46,10 +63,8 @@ function submitForm() {
                 aspirations: aspirations
             };
             localStorage.setItem('portfolios', JSON.stringify(portfolios));
-        };
-        reader.readAsDataURL(image);
+        }
     }
 
     window.location.href = 'portfolio.html?id=' + id;
 }
-

@@ -164,3 +164,13 @@ span::before {
     }
    
   } 
+.hlo{
+    text-align: center;
+    margin: 0px;
+    font-size: 30px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    font-style: italic;
+    
+}

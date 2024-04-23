@@ -12,7 +12,7 @@
         <div class="portfolio-content">
             <h1>MY PORTFOlLIO </h1> 
             <h2>----------------------------------------------------------------</h2>
-            <div id="image-container" style="font-size: 40px; font-weight: bold; font-family: Arial;" >My Image</div> <!-- Container for the image -->
+            <div id="image-container" style="font-size: 40px; font-weight: bold; font-family: Arial;">My Image</div> <!-- Container for the image -->
             <div id="portfolio-details"></div>
             
             
@@ -30,35 +30,57 @@
         var urlParams = new URLSearchParams(window.location.search);
         var id = urlParams.get('id');
         
-       
-        
-        // Display portfolio details
         if (portfolios[id]) {
-    var portfolio = portfolios[id];
-    var portfolioContent = '<div id="portfolio-details">';
-    portfolioContent += '<p><strong>My Name:</strong> ' + portfolio.name + '</p>';
-    portfolioContent += '<p><strong>About me:</strong> ' + portfolio.about + '</p>';
-    portfolioContent += '<p><strong>My Age:</strong> ' + portfolio.age + '</p>';
-    portfolioContent += '<p><strong>My Achievements:</strong> ' + portfolio.achievements + '</p>';
-    portfolioContent += '<p><strong>My Hobbies:</strong> ' + portfolio.hobbies + '</p>';
-    portfolioContent += '<p><strong>My Creations:</strong> ' + portfolio.creations + '</p>';
-    portfolioContent += '<p><strong>My Inventions:</strong> ' + portfolio.inventions + '</p>';
-    portfolioContent += '<p><strong>My Aspirations:</strong> ' + portfolio.aspirations + '</p>';
-    portfolioContent += '<p><strong>ID:</strong> ' + id + '</p>';
-    portfolioContent += '</div>';
-    document.getElementById('portfolio-details').innerHTML = portfolioContent;
+            var portfolio = portfolios[id];
+            var portfolioContent = '<div id="portfolio-details">';
+            
+            // Check if each section has content and only include it if it does
+            if (portfolio.name) {
+                portfolioContent += '<p><strong>My Name:</strong> ' + portfolio.name + '</p>';
+            }
+            if (portfolio.about) {
+                portfolioContent += '<p><strong>About me:</strong> ' + portfolio.about + '</p>';
+            }
+            if (portfolio.age) {
+                portfolioContent += '<p><strong>My Age:</strong> ' + portfolio.age + '</p>';
+            }
+            if (portfolio.achievements) {
+                portfolioContent += '<p><strong>My Achievements:</strong> ' + portfolio.achievements + '</p>';
+            }
+            if (portfolio.hobbies) {
+                portfolioContent += '<p><strong>My Hobbies:</strong> ' + portfolio.hobbies + '</p>';
+            }
+            if (portfolio.creations) {
+                portfolioContent += '<p><strong>My Creations:</strong> ' + portfolio.creations + '</p>';
+            }
+            if (portfolio.inventions) {
+                portfolioContent += '<p><strong>My Inventions:</strong> ' + portfolio.inventions + '</p>';
+            }
+            if (portfolio.aspirations) {
+                portfolioContent += '<p><strong>My Aspirations:</strong> ' + portfolio.aspirations + '</p>';
+            }
+            
+            portfolioContent += '<p><strong>ID:</strong> ' + id + '</p>';
+            portfolioContent += '</div>';
+            
+            document.getElementById('portfolio-details').innerHTML = portfolioContent;
 
-    // Display the image
-    var imageContainer = document.getElementById('image-container');
-    var img = document.createElement('img');
-    img.src = portfolio.image;
-    img.alt = 'Profile Image';
-    imageContainer.appendChild(img);
-} else {
-    document.getElementById('portfolio-details').innerHTML = '<p>No portfolio found with the provided ID.</p>';
-}
-
-
+            // Display the image if it exists
+            var imageContainer = document.getElementById('image-container');
+            if (portfolio.image) {
+                var img = document.createElement('img');
+                img.src = portfolio.image;
+                img.alt = 'Profile Image';
+                imageContainer.appendChild(img);
+                // Display "MY IMAGE" text if image exists
+                imageContainer.style.display = 'block';
+            } else {
+                // Hide "MY IMAGE" text if image doesn't exist
+                imageContainer.style.display = 'none';
+            }
+        } else {
+            document.getElementById('portfolio-details').innerHTML = '<p>No portfolio found with the provided ID.</p>';
+        }
     </script>
     <script src="portfolio_script.js"></script>
 </body>
