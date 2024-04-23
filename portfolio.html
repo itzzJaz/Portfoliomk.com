@@ -8,16 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="portfolio-container">
+    <div class="portfolio-containe">
         <div class="portfolio-content">
-            <h1> MY PORTFOlLIO</h1> 
+            <h1>MY PORTFOlLIO </h1> 
             <h2>----------------------------------------------------------------</h2>
             <div id="portfolio-details"></div>
             <div id="image-container"></div> <!-- Container for the image -->
             <a href="index.html" class="back-button">Back</a>
         </div>
     </div>
+    
 
+  
     <script>
         // Load portfolios from localStorage
         var portfolios = JSON.parse(localStorage.getItem('portfolios')) || {};
@@ -31,7 +33,7 @@
         // Display portfolio details
         if (portfolios[id]) {
             var portfolio = portfolios[id];
-            var portfolioContent = '<p><strong1> My Name:' + portfolio.name  +  '</p>';
+            var portfolioContent = '<p><strong1> My Name:' + portfolio.name   + '</p>';
             portfolioContent += '<p><strong0>About me :' + portfolio.about + '</p>';
             portfolioContent += '<p><strong2> My Age:' + portfolio.age + '</p>';
             portfolioContent += '<p><strong3>My Achievements:' + portfolio.achievements + '</p>';

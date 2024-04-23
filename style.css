@@ -12,7 +12,7 @@ body {
     width: 50%;
     margin: 50px auto;
     padding: 30px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 0; /* Initially hidden */
@@ -24,6 +24,7 @@ body {
 .input-field {
     margin-bottom: 20px;
     opacity: 1;
+   
 }
 
 .input-field label {
@@ -35,16 +36,20 @@ body {
     font-style: italic;
     font-style: oblique;
     font-size: 30px;
+    font-family: Arial;
     
 }
 
 .input-field input,
 .input-field textarea {
     padding: 10px;
+    margin: 0px;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
 button {
@@ -90,6 +95,7 @@ h1{
     font-style: italic;
     font-family: cursive;;
     font-weight: bold;
+    
    
 
 }
@@ -118,6 +124,43 @@ footer{
     font-weight: bold;
     font-style: italic;
     text-align: center;
-    font-size: 10px
-    
+    font-size: 10px;
+    font-family: sans-serif;
 }
+
+span::before { 
+    content: "Maker"; 
+    animation: animate infinite 10s; 
+    padding-left: 10px; 
+    
+    font-size: 100px;
+    
+  } 
+  
+  @keyframes animate { 
+  
+    0% { 
+        content: "Creator"; 
+        font-size: 100px;
+       
+       
+        
+    } 
+  
+    50% { 
+        content: "Builder"; 
+        font-size: 100px;
+        
+        
+        
+    } 
+  
+    75% {
+        content: "Designer"; 
+        font-size: 100px;
+        
+        
+        
+    }
+   
+  } 
