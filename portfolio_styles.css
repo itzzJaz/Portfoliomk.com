@@ -130,40 +130,11 @@ body {
 }
 /* portfolio_styles.css */
 #image-container img {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
   display: block;
   margin: 0 auto;
+  
 }
-span::before { 
-  content: " I LOVE IT"; 
-  animation: animate infinite 10s; 
-  padding-left: 10px; 
-  background-color: blueviolet;
-  font-size: 100px;
-} 
-
-@keyframes animate { 
-
-  0% { 
-      content: "IS the best"; 
-      font-size: 100px;
-      background-color: red; 
-  } 
-
-  50% { 
-      content: "IS About me "; 
-      font-size: 100px;
-      background-color: green; 
-  } 
-
-  75% { 
-      content: " ,I like it"; 
-      font-size: 100px;
-      background-color: aqua;
-  } 
- 
-} 
-
 
 /*# sourceMappingURL=portfolio_styles.css.map */
