@@ -215,3 +215,8 @@ span::before {
     from, to { border-color: transparent }
     50% { border-color: transparent transparent}
   }
+
+.hiw{
+    text-align: center;
+    color: red;
+}
