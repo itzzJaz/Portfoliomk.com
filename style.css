@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
  
-    background-image : url(11.jpg);
+    background-image : url(76YS.gif);
     background-position: center center;
 }
 
@@ -34,9 +34,13 @@ body {
     font-weight: bold;
     color:#000000;
     font-style: italic;
-    font-style: oblique;
+    letter-spacing: 1px;
     font-size: 30px;
-    font-family: Arial;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: bold 700;
+    
     
 }
 
@@ -146,7 +150,7 @@ span::before {
        
         
     } 
-  
+    
     50% { 
         content: "Builder"; 
         font-size: 100px;
@@ -247,4 +251,3 @@ span::before {
       display: none; /* Hide the span on smaller screens */
     }
   }
-  
