@@ -220,3 +220,31 @@ span::before {
     text-align: center;
     color: red;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    /* CSS styles for mobile devices */
+    .container {
+      width: 80%; /* Adjust the width for smaller screens */
+      margin: 20px auto; /* Adjust the margin for centering */
+      padding: 20px;
+    }
+  
+    .input-field label {
+      font-size: 20px; /* Adjust label font size for better readability */
+    }
+  
+    h1.iuw {
+      font-size: 50px; /* Adjust heading font size for better visibility */
+    }
+  }
+
+  
+  @media only screen and (max-width: 600px) {
+    /* CSS styles for mobile devices */
+    h1.iuw span {
+      display: none; /* Hide the span on smaller screens */
+    }
+  }
+  
