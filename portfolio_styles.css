@@ -130,8 +130,8 @@ body {
 }
 /* portfolio_styles.css */
 #image-container img {
-  max-width: 30%;
-  height: auto;
+  max-width: 607px;
+  max-height: 586px;
   display: block;
   margin: 0 auto;
   border-radius: 50%;

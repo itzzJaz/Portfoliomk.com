@@ -181,7 +181,7 @@ span::before {
 
 .input-field label {
     color: #000000;
-  
+    text-align: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -251,3 +251,12 @@ span::before {
       display: none; /* Hide the span on smaller screens */
     }
   }
+.link{
+    text-align: center;
+    color: black;
+    font-family:cursive;
+    font-weight: bold;
+    font-size :14.5px;
+   
+
+}
