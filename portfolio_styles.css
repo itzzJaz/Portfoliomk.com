@@ -21,8 +21,8 @@ body {
 .portfolio-content {
   
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  
+ 
   text-align: center;
   background-image: url(11.jpg);
   background-position: center left;
@@ -33,7 +33,7 @@ body {
 .portfolio-content h1 {
   text-align: center;
   font-size: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-style: italic;
   font-weight: bold;
 }
@@ -42,7 +42,7 @@ body {
   text-align: left;
   font-size: 40px;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 #portfolio-details p {
@@ -140,5 +140,23 @@ body {
   
 }
 
-
+.hwe{
+  font-size: 100px;
+  font-weight: bold;
+  font-style: italic;
+  
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  border: black 10px solid ;
+  background-image: url(5559852.jpg) ;
+ 
+}
+.hwe h1{
+  font-size: 100px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: cursive;
+  
+}
 /*# sourceMappingURL=portfolio_styles.css.map */

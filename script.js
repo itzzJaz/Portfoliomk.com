@@ -23,6 +23,8 @@ function submitForm() {
     var creations = document.getElementById('creations').value;
     var inventions = document.getElementById('inventions').value;
     var aspirations = document.getElementById('aspirations').value;
+    var email = document.getElementById('email').value;
+    var phonenum = document.getElementById('phonenumber').value;
     var id = document.getElementById('id').value;
 
     if (!id) {
@@ -45,7 +47,10 @@ function submitForm() {
                     hobbies: hobbies,
                     creations: creations,
                     inventions: inventions,
-                    aspirations: aspirations
+                    aspirations: aspirations,
+                    email: email,
+                    phonenum: phonenum
+
                 };
                 localStorage.setItem('portfolios', JSON.stringify(portfolios));
             };
@@ -60,7 +65,9 @@ function submitForm() {
                 hobbies: hobbies,
                 creations: creations,
                 inventions: inventions,
-                aspirations: aspirations
+                aspirations: aspirations,
+                email: email,
+                phonenum: phonenum
             };
             localStorage.setItem('portfolios', JSON.stringify(portfolios));
         }
