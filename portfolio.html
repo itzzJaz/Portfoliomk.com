@@ -39,38 +39,43 @@
             portfolioContent += '<div id="personal" class="hwe">';
                 portfolioContent += '<h1>PERSONAL DETAILS<h1>'
             if (portfolio.name) {
-                portfolioContent += '<p><strong>My Name:</strong> ' + portfolio.name + '</p>';
+                portfolioContent += '<p>My Name:' + portfolio.name + '</p>';
             }
             if (portfolio.about) {
-                portfolioContent += '<p><strong>About me:</strong> ' + portfolio.about + '</p>';
+                portfolioContent += '<p>About me:' + portfolio.about + '</p>';
             }
             if (portfolio.age) {
-                portfolioContent += '<p><strong>My Age:</strong> ' + portfolio.age + '</p>';
+                portfolioContent += '<p>My Age:' + portfolio.age + '</p>';
             }
+           
             portfolioContent += '</div>';
+            if (portfolio.skills) {
+                portfolioContent += '<p><strong>My Skills:' + portfolio.skills + '</p>';
+            }
             if (portfolio.achievements) {
-                portfolioContent += '<p><strong>My Achievements:</strong> ' + portfolio.achievements + '</p>';
+                portfolioContent += '<p><strong>My Achievements:' + portfolio.achievements + '</p>';
             }
             if (portfolio.hobbies) {
-                portfolioContent += '<p><strong>My Hobbies:</strong> ' + portfolio.hobbies + '</p>';
+                portfolioContent += '<p><strong>My Hobbies:' + portfolio.hobbies + '</p>';
             }
             if (portfolio.creations) {
-                portfolioContent += '<p><strong>My Creations:</strong> ' + portfolio.creations + '</p>';
+                portfolioContent += '<p><strong>My Creations:' + portfolio.creations + '</p>';
             }
             if (portfolio.inventions) {
-                portfolioContent += '<p><strong>My Inventions:</strong> ' + portfolio.inventions + '</p>';
+                portfolioContent += '<p><strong>My Inventions:' + portfolio.inventions + '</p>';
             }
             if (portfolio.aspirations) {
-                portfolioContent += '<p><strong>My Aspirations:</strong> ' + portfolio.aspirations + '</p>';
+                portfolioContent += '<p><strong>My Aspirations:' + portfolio.aspirations + '</p>';
             }
+
             if (portfolio.email) {
-                portfolioContent += '<p><strong>My Mail id :</strong> ' +   portfolio.email + '</p>';
+                portfolioContent += '<p><strong>My Mail id :' +   portfolio.email + '</p>';
             }
             if (portfolio.phonenum){
-                portfolioContent += '<p><strong>My Phone Number :</strong> ' +   portfolio.phonenum + '</p>';
+                portfolioContent += '<p><strong>My Phone Number :' +   portfolio.phonenum + '</p>';
             }
             
-            portfolioContent += '<p><strong>ID:</strong> ' + id + '</p>';
+            portfolioContent += '<p><strong>ID:' + id + '</p>';
             portfolioContent += '</div>';
             
             document.getElementById('portfolio-details').innerHTML = portfolioContent;

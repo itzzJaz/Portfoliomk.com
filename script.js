@@ -6,7 +6,30 @@ window.onload = function() {
     document.getElementById('container').classList.add('slide-in');
 };
 
+
+// Image preview
+document.getElementById('image').addEventListener('change', function () {
+    const file = this.files[0];
+    const reader = new FileReader();
+  
+    reader.addEventListener('load', function () {
+      const image = document.createElement('img');
+      image.src = reader.result;
+      image.style.maxWidth = '200px';
+      image.style.maxHeight = '200px';
+  
+      // Add the image to a preview section
+      const previewSection = document.getElementById('preview-section');
+      previewSection.innerHTML = ''; // Clear previous previews
+      previewSection.appendChild(image);
+    }, false);
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+  });
 // Generate a random ID
+
 function generateRandomID() {
     return Math.floor(Math.random() * 1000000);
 }
@@ -18,6 +41,7 @@ function submitForm() {
     var image = document.getElementById('image').files[0];
     var about = document.getElementById('about').value;
     var age = document.getElementById('age').value;
+    var skills = document.getElementById('skills').value;
     var achievements = document.getElementById('achievements').value;
     var hobbies = document.getElementById('hobbies').value;
     var creations = document.getElementById('creations').value;
@@ -26,6 +50,7 @@ function submitForm() {
     var email = document.getElementById('email').value;
     var phonenum = document.getElementById('phonenumber').value;
     var id = document.getElementById('id').value;
+    
 
     if (!id) {
         id = generateRandomID();
@@ -49,8 +74,8 @@ function submitForm() {
                     inventions: inventions,
                     aspirations: aspirations,
                     email: email,
-                    phonenum: phonenum
-
+                    phonenum: phonenum,
+                    skills: skills
                 };
                 localStorage.setItem('portfolios', JSON.stringify(portfolios));
             };
@@ -67,7 +92,8 @@ function submitForm() {
                 inventions: inventions,
                 aspirations: aspirations,
                 email: email,
-                phonenum: phonenum
+                phonenum: phonenum,
+                skills: skills
             };
             localStorage.setItem('portfolios', JSON.stringify(portfolios));
         }

@@ -260,3 +260,21 @@ span::before {
    
 
 }
+
+.ley{
+    text-align: center;
+    color: black;
+    font-family:cursive;
+    font-weight: bold;
+    font-size :14.5px;
+    font-style: italic;
+}
+
+.prewi{
+    text-align: center;
+    color: black;
+    font-family:cursive;
+    font-weight: bold;
+    font-size :20px;
+    font-style: italic;
+}

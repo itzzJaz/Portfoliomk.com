@@ -52,7 +52,9 @@ body {
 #portfolio-details p strong {
   font-weight: bold;
   font-style: italic;
-  text-align: center;
+ font-size: 70px;
+  
+  font-family: 'Roboto', sans-serif;
  
 }
 
@@ -80,6 +82,8 @@ body {
   font-style: italic;
   text-align: center;
   font-size: 70px;
+  
+  font-family: 'Roboto', sans-serif;
 }
 #portfolio-details p strong4 {
   font-weight: bold;
@@ -135,6 +139,10 @@ body {
   display: block;
   margin: 0 auto;
   border-radius: 50%;
+  ;
+  border: #000000 10px solid ;
+  align-items: center;
+  text-align: center;
 
   
   
