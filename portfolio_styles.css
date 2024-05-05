@@ -3,8 +3,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-  background-image : url(11.jpg);
-  background-position : center left;
+  background-image : url(5559852.jpg);
+  background-size: 5000px;
+  background-position: top center;
+  
   
 }
 
@@ -21,11 +23,13 @@ body {
 .portfolio-content {
   
   border-radius: 10px;
-  
+  font-family: cursive; 
+  font-weight: bold;
+  font-style: italic;
  
   text-align: center;
-  background-image: url(11.jpg);
-  background-position: center left;
+ 
+  
 
   
 }
@@ -53,8 +57,11 @@ body {
   font-weight: bold;
   font-style: italic;
  font-size: 70px;
+ font-family: cursive; 
+  font-weight: bold;
+  font-style: italic;
   
-  font-family: 'Roboto', sans-serif;
+  
  
 }
 
@@ -119,7 +126,7 @@ body {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
-  border: none;
+  border: color black solid  ;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
@@ -166,5 +173,12 @@ body {
   font-style: italic;
   font-family: cursive;
   
+}
+.but{
+  font-family: cursive;
+  font-size: 30px;
+  background-color: #007bff;
+  color:white;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=portfolio_styles.css.map */

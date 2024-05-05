@@ -11,11 +11,11 @@
     <div class="portfolio-containe">
         <div class="portfolio-content">
             <h1>MY PORTFOlLIO </h1> 
-            <h2>----------------------------------------------------------------</h2>
-            <div id="image-container" style="font-size: 40px; font-weight: bold; font-family: Arial;">My Image</div> <!-- Container for the image -->
+           <br> </br>
+            <div id="image-container" style="font-size: 50px; font-weight: bold; font-family: cursive; font-style: italic; ">My Image</div> <!-- Container for the image -->
             <div id="portfolio-details"></div>
             
-            
+            <button id="edit-button" class="but" onclick="back()">Edit Details</button>
             <a href="index.html" class="back-button">Back</a>
         </div>
     </div>
@@ -47,8 +47,10 @@
             if (portfolio.age) {
                 portfolioContent += '<p>My Age:' + portfolio.age + '</p>';
             }
-           
             portfolioContent += '</div>';
+            
+               
+            
             if (portfolio.skills) {
                 portfolioContent += '<p><strong>My Skills:' + portfolio.skills + '</p>';
             }
@@ -78,6 +80,7 @@
             portfolioContent += '<p><strong>ID:' + id + '</p>';
             portfolioContent += '</div>';
             
+            
             document.getElementById('portfolio-details').innerHTML = portfolioContent;
 
             // Display the image if it exists
@@ -96,6 +99,10 @@
         } else {
             document.getElementById('portfolio-details').innerHTML = '<p>No portfolio found with the provided ID.</p>';
         }
+       function back(){
+              
+            history.back();    
+    }
     </script>
     <script src="portfolio_script.js"></script>
 </body>

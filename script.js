@@ -1,13 +1,12 @@
-// Load portfolios from localStorage
+
 var portfolios = JSON.parse(localStorage.getItem('portfolios')) || {};
-// After the page loads, add the slide-in class to trigger the animation
+
 window.onload = function() {
     console.debug('Slideenter animationn');
     document.getElementById('container').classList.add('slide-in');
 };
 
 
-// Image preview
 document.getElementById('image').addEventListener('change', function () {
     const file = this.files[0];
     const reader = new FileReader();
@@ -18,9 +17,9 @@ document.getElementById('image').addEventListener('change', function () {
       image.style.maxWidth = '200px';
       image.style.maxHeight = '200px';
   
-      // Add the image to a preview section
+    
       const previewSection = document.getElementById('preview-section');
-      previewSection.innerHTML = ''; // Clear previous previews
+      previewSection.innerHTML = ''; 
       previewSection.appendChild(image);
     }, false);
   
@@ -28,14 +27,13 @@ document.getElementById('image').addEventListener('change', function () {
       reader.readAsDataURL(file);
     }
   });
-// Generate a random ID
+
 
 function generateRandomID() {
-    return Math.floor(Math.random() * 1000000);
+    return Math.floor(Math.random() * 1000000/100);
 }
 
-// Function to submit the form
-// Function to submit the form
+
 function submitForm() {
     var name = document.getElementById('name').value;
     var image = document.getElementById('image').files[0];
@@ -49,9 +47,14 @@ function submitForm() {
     var aspirations = document.getElementById('aspirations').value;
     var email = document.getElementById('email').value;
     var phonenum = document.getElementById('phonenumber').value;
+ 
     var id = document.getElementById('id').value;
+  
+   
+    
     
 
+    
     if (!id) {
         id = generateRandomID();
         document.getElementById('id').value = id;
