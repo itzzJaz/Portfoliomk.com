@@ -14,7 +14,7 @@ document.getElementById('image').addEventListener('change', function () {
     reader.addEventListener('load', function () {
       const image = document.createElement('img');
       image.src = reader.result;
-      image.style.maxWidth = '200px';
+        image.style.maxWidth = '200px';
       image.style.maxHeight = '200px';
   
     

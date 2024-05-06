@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-  background-image : url(5559852.jpg);
+  background-image : url(98e270125871111.61224eb4b4b89.png);
   background-size: 5000px;
   background-position: top center;
   
@@ -14,8 +14,8 @@ body {
 .portfolio-container {
   display: flex;
   justify-content: left;
-  align-items: left;
-  height: 100h;
+  align-items:  center;
+  height: 100px;
   width: 1000px ;
   
 }
@@ -164,7 +164,8 @@ body {
   margin: 0px;
   padding: 0px;
   border: black 10px solid ;
-  background-image: url(5559852.jpg) ;
+  background-image: url(98e270125871111.61224eb4b4b89.png) ;
+  background-size: 5000px;
  
 }
 .hwe h1{
@@ -180,5 +181,11 @@ body {
   background-color: #007bff;
   color:white;
   border-radius: 10px;
+}
+img{
+    width: 607px;
+    height: 586px;
+    border-radius: 50%;
+
 }
 /*# sourceMappingURL=portfolio_styles.css.map */
