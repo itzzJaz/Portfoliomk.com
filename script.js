@@ -47,9 +47,12 @@ function submitForm() {
     var aspirations = document.getElementById('aspirations').value;
     var email = document.getElementById('email').value;
     var phonenum = document.getElementById('phonenumber').value;
- 
     var id = document.getElementById('id').value;
-  
+    var cass = document.getElementById('class') ? document.getElementById('class').value : null;
+    var car = document.getElementById('car') ? document.getElementById('car').value : null;
+    var edu = document.getElementById('education') ? document.getElementById('education').value : null;
+    var ex = document.getElementById('expr') ? document.getElementById('expr').value : null;
+    var adc = document.getElementById('adc') ? document.getElementById('adc').value : null
    
     
     
@@ -64,12 +67,12 @@ function submitForm() {
         if (image) {
             var reader = new FileReader();
             reader.onload = function(event) {
-                imageData = event.target.result;
+                 imageData = event.target.result;
 
                 portfolios[id] = {
                     name: name,
-                    image: imageData,
                     age: age,
+                    image: imageData,
                     achievements: achievements,
                     about: about,
                     hobbies: hobbies,
@@ -78,7 +81,13 @@ function submitForm() {
                     aspirations: aspirations,
                     email: email,
                     phonenum: phonenum,
-                    skills: skills
+                    skills: skills,
+                    cass: cass,
+                    car: car,
+                    edu: edu,
+                    ex: ex,
+                    adc:adc
+                    
                 };
                 localStorage.setItem('portfolios', JSON.stringify(portfolios));
             };
@@ -96,7 +105,12 @@ function submitForm() {
                 aspirations: aspirations,
                 email: email,
                 phonenum: phonenum,
-                skills: skills
+                skills: skills,
+                cass : cass,
+                edu:edu,
+                ex:ex,
+                car: car,
+                adc:adc
             };
             localStorage.setItem('portfolios', JSON.stringify(portfolios));
         }
