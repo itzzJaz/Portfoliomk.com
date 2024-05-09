@@ -118,3 +118,103 @@ function submitForm() {
 
     window.location.href = 'portfolio.html?id=' + id;
 }
+function add(){
+
+           
+    var portfolioContent = '<button id = "cl" onclick="c()">Class</button>' ;
+    portfolioContent+= '<br>';
+    portfolioContent+= '<button id="car" onclick="f()">Career</button>' ;
+    portfolioContent+= '<br>';
+    portfolioContent+= '<button id = "edu" onclick="d()">Education</button>' ;
+    portfolioContent+= '<br>';
+    portfolioContent+= '<button id = "ex" onclick="g()">Experience</button>' ;
+    portfolioContent+= '<br>';
+    portfolioContent+= '<button id = "pa" onclick="p()">Professional Associations</button>';
+    portfolioContent+= '<br>';
+    portfolioContent+= '<button id = "Adi" onclick="a()">Additional Contact Information</button>';
+    
+      
+        var labelContainer = document.getElementById('lb');
+    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    
+    
+    }
+    function c(){
+    var label = "Class"
+    var portfolioContent = '<div class="input-field" id="id-field">' ;
+    portfolioContent += '<p><strong>'+label+'</p>';
+    
+    portfolioContent+= '<textarea id="class" rows="1"></textarea>'
+        portfolioContent += '</div>';
+    
+        var labelContainer = document.getElementById('lb1');
+    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    
+    
+    }
+    function f(){
+    var label = "Career"
+    var portfolioContent = '<div class="input-field" id="id-field">' ;
+    portfolioContent += '<p><strong>'+label+'</p>';
+    
+    portfolioContent+= '<textarea id="car" rows="4"></textarea>'
+        portfolioContent += '</div>';
+    
+        var labelContainer = document.getElementById('lb2');
+    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    
+    
+    }
+    function d(){
+    var label = "Education"
+    var portfolioContent = '<div class="input-field" id="id-field">' ;
+    portfolioContent += '<p><strong>'+label+'</p>';
+    
+    portfolioContent+= '<textarea id="education" rows="1"></textarea>'
+        portfolioContent += '</div>';
+    
+        var labelContainer = document.getElementById('lb3');
+    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    
+    
+    }
+    function g(){
+    var label = "Experience"
+    var portfolioContent = '<div class="input-field" id="id-field">' ;
+    portfolioContent += '<p><strong>'+label+'</p>';
+    
+    portfolioContent+= '<textarea id="expr" rows="4"></textarea>'
+        portfolioContent += '</div>';
+    
+        var labelContainer = document.getElementById('lb4');
+    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    
+    
+    }
+    function a(){
+    var label = "Additional Contact Information"
+    var portfolioContent = '<div class="input-field" id="id-field">' ;
+    portfolioContent += '<p><strong>'+label+'</p>';
+    
+    portfolioContent+= '<textarea id="adc" rows="4"></textarea>'
+        portfolioContent += '</div>';
+        var labelContainer = document.getElementById('lb5');
+        labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    }
+    function p(){
+    var label = "Professional Associations"
+    var portfolioContent = '<div class="input-field" id="id-field">' ;
+    portfolioContent += '<p><strong>'+label+'</p>';
+    
+    portfolioContent+= '<textarea id="pas" rows="4"></textarea>'
+        portfolioContent += '</div>';
+        var labelContainer = document.getElementById('lb6');
+        labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
+    }
