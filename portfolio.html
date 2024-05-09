@@ -12,23 +12,25 @@
         <div class="portfolio-content">
             <h1>MY PORTFOlLIO </h1> 
            <br> 
-            <div id="image-container" style="font-size: 50px; font-weight: bold; font-family: cursive; font-style: italic; ">My Image</div> <!-- Container for the image -->
+            <div id="image-container" style="font-size: 50px; font-weight: bold; font-family: cursive; font-style: italic; ">My Image</div> 
             <div id="portfolio-details"></div>
             
-            <button id="edit-button" class="but" onclick="back()">Edit Details</button>
+           
             <a href="index.html" class="back-button">Back</a>
+            <button onclick="ch()" class="ch">Change theme</button>
+  
         </div>
     </div>
-    <button onclick="ch()" class="but">Change theme ig</button>
+
   
     
   
     <script>
 
-        // Load portfolios from localStorage
+        
         var portfolios = JSON.parse(localStorage.getItem('portfolios')) || {};
         
-        // Get the ID from the URL
+        
         var urlParams = new URLSearchParams(window.location.search);
         var id = urlParams.get('id');
         
@@ -36,7 +38,7 @@
             var portfolio = portfolios[id];
             var portfolioContent = '<div id="portfolio-details">' ;
             
-            // Check if each section has content and only include it if it does
+          
             portfolioContent += '<div id="personal" class="hwe">';
                 portfolioContent += '<h1>PERSONAL DETAILS<h1>'
             if (portfolio.name) {
@@ -102,17 +104,17 @@
             
             document.getElementById('portfolio-details').innerHTML = portfolioContent;
 
-            // Display the image if it exists
+            
             var imageContainer = document.getElementById('image-container');
             if (portfolio.image) {
                 var img = document.createElement('img');
                 img.src = portfolio.image;
                 img.alt = 'Profile Image';
                 imageContainer.appendChild(img);
-                // Display "MY IMAGE" text if image exists
+           
                 imageContainer.style.display = 'block';
             } else {
-                // Hide "MY IMAGE" text if image doesn't exist
+            
                 imageContainer.style.display = 'none';
             }
         } else {
@@ -127,13 +129,12 @@ shuffle(numbers);
 
 function ch(){
     var body = document.getElementById('body');
-    if (numbers.length === 0) { // If all numbers have been used, reset the array
+    if (numbers.length === 0) { 
         numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
         shuffle(numbers);
     }
-    var num = numbers.pop(); // Use and remove the last number in the array
-    var newColor = getRandomColor();
-    console.log(newColor); // Outputs: #3E4F5C
+    var num = numbers.pop(); 
+    
 
     if(num==1){
             body.style.backgroundImage = "url('11.jpg')";
@@ -184,14 +185,14 @@ function ch(){
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
+
     while (0 !== currentIndex) {
 
-        // Pick a remaining element...
+       
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
 
-        // And swap it with the current element.
+       
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
@@ -200,14 +201,7 @@ function shuffle(array) {
     return array;
 }
 
-    function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+
 
     </script>
     <script src="portfolio_script.js"></script>

@@ -63,7 +63,7 @@ function submitForm() {
         id = generateRandomID();
         document.getElementById('id').value = id;
 
-        // Convert image to base64 string for storage if an image is provided
+       
         var imageData = null;
         if (image) {
             var reader = new FileReader();
@@ -95,7 +95,7 @@ function submitForm() {
             };
             reader.readAsDataURL(image);
         } else {
-            // If no image provided, store other details without the image
+            
             portfolios[id] = {
                 name: name,
                 age: age,
@@ -138,7 +138,7 @@ function add(){
     
       
         var labelContainer = document.getElementById('lb');
-    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.innerHTML = ''; 
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     
     
@@ -152,7 +152,7 @@ function add(){
         portfolioContent += '</div>';
     
         var labelContainer = document.getElementById('lb1');
-    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.innerHTML = ''; 
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     
     
@@ -166,7 +166,7 @@ function add(){
         portfolioContent += '</div>';
     
         var labelContainer = document.getElementById('lb2');
-    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.innerHTML = ''; 
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     
     
@@ -180,7 +180,7 @@ function add(){
         portfolioContent += '</div>';
     
         var labelContainer = document.getElementById('lb3');
-    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.innerHTML = ''; 
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     
     
@@ -194,7 +194,7 @@ function add(){
         portfolioContent += '</div>';
     
         var labelContainer = document.getElementById('lb4');
-    labelContainer.innerHTML = ''; // Clear existing content
+    labelContainer.innerHTML = ''; 
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     
     
@@ -207,7 +207,7 @@ function add(){
     portfolioContent+= '<textarea id="adc" rows="4"></textarea>'
         portfolioContent += '</div>';
         var labelContainer = document.getElementById('lb5');
-        labelContainer.innerHTML = ''; // Clear existing content
+        labelContainer.innerHTML = '';
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     }
     function p(){
@@ -218,6 +218,6 @@ function add(){
     portfolioContent+= '<textarea id="pas" rows="4"></textarea>'
         portfolioContent += '</div>';
         var labelContainer = document.getElementById('lb6');
-        labelContainer.innerHTML = ''; // Clear existing content
+        labelContainer.innerHTML = ''; 
     labelContainer.insertAdjacentHTML('beforeend', portfolioContent);
     }
