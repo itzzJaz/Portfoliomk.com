@@ -53,6 +53,7 @@ function submitForm() {
     var edu = document.getElementById('education') ? document.getElementById('education').value : null;
     var ex = document.getElementById('expr') ? document.getElementById('expr').value : null;
     var adc = document.getElementById('adc') ? document.getElementById('adc').value : null
+    var pas = document.getElementById('pas') ? document.getElementById('pas').value : null
    
     
     
@@ -86,7 +87,8 @@ function submitForm() {
                     car: car,
                     edu: edu,
                     ex: ex,
-                    adc:adc
+                    adc:adc,
+                    pas:pas
                     
                 };
                 localStorage.setItem('portfolios', JSON.stringify(portfolios));
@@ -110,7 +112,8 @@ function submitForm() {
                 edu:edu,
                 ex:ex,
                 car: car,
-                adc:adc
+                adc:adc,
+                pas:pas
             };
             localStorage.setItem('portfolios', JSON.stringify(portfolios));
         }

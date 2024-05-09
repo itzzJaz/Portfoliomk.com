@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="portfolio_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     <div class="portfolio-containe">
         <div class="portfolio-content">
             <h1>MY PORTFOlLIO </h1> 
@@ -19,11 +19,12 @@
             <a href="index.html" class="back-button">Back</a>
         </div>
     </div>
-    
+    <button onclick="ch()" class="but">Change theme ig</button>
   
     
   
     <script>
+
         // Load portfolios from localStorage
         var portfolios = JSON.parse(localStorage.getItem('portfolios')) || {};
         
@@ -81,6 +82,9 @@
             if(portfolio.car){
                 portfolioContent += '<p><strong>My Career:' + portfolio.car + '</p>';
             }
+            if(portfolio.pas){
+                portfolioContent += '<p><strong> Professional Associations:' + portfolio.pas + '</p>';
+            }
             if(portfolio.adc){
                 portfolioContent += '<p><strong> Additional Contact Information:' + portfolio.adc + '</p>';
             }
@@ -118,6 +122,93 @@
               
             history.back();    
     }
+    var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+shuffle(numbers);
+
+function ch(){
+    var body = document.getElementById('body');
+    if (numbers.length === 0) { // If all numbers have been used, reset the array
+        numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        shuffle(numbers);
+    }
+    var num = numbers.pop(); // Use and remove the last number in the array
+    var newColor = getRandomColor();
+    console.log(newColor); // Outputs: #3E4F5C
+
+    if(num==1){
+            body.style.backgroundImage = "url('11.jpg')";
+            body.style.color = "#000000";
+        }
+        if(num==2){
+            body.style.backgroundImage = "url('download.jpg')";
+            body.style.color = "#000000";
+            
+        }
+       if(num==3){
+        body.style.backgroundImage = "url('download.jpg')";
+        body.style.color = "#000000";
+        
+       }
+       if(num==4){
+        body.style.backgroundImage = "url('images.jpg')";
+        body.style.color = "#ffffff";
+       }
+       if(num==5){
+       body.style.backgroundImage = "url('6.jpg')";
+       body.style.color = "#000000";
+       }
+       if(num==6){
+         body.style.backgroundImage = "url('1.jpg')";
+         body.style.color = "#ffffff";
+       }
+       if(num==7){
+         body.style.backgroundImage = "url('2.jpg')";
+         body.style.color = "#000000";
+       }
+       if(num==8){
+         body.style.backgroundImage = "url('3.png')";
+         body.style.color = "#000000";
+       }
+       if(num==9){
+         body.style.backgroundImage = "url('4.png')";
+         body.style.color = "#000000";
+       }
+       if(num==0){
+         body.style.backgroundImage = "url('5.jpg')";
+         body.style.color = "#000000";
+       }
+        console.log(num)
+    }
+
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+    function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
     </script>
     <script src="portfolio_script.js"></script>
 </body>
