@@ -133,9 +133,7 @@ body {
   text-decoration: none;
   transition: background-color 0.3s;
   font-size: 25px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  
   
   
 
@@ -187,9 +185,7 @@ body {
   color:white;
   border-radius: 10px;
   border-color:#007bff;
-  position: absolute;
-  bottom: 10;
-  left: 0;
+  
   
 }
 img{
@@ -205,10 +201,6 @@ img{
   color:white;
   border-radius: 10px;
   border-color:#007bff;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 0px;
-  padding: 0px;
+  
 }
 
